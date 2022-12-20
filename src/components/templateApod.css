@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'nasaFont';
+    src: url('../../public/assets/nasalization-rg-webfont.woff2') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.fotoYTexto{
+    margin-top: 2rem;
+}
+
+.fotoYTexto p{
+    margin: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.marcoApod {
+    width: 100%;
+    
+}
+
+.marcoApod img{
+    width: 80%;
+    box-shadow: 0px 10px 15px 0px black;
+    
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 1,8rem;
+    font-weight: 900;
+    color: #212121;
+    font-family: nasaFont;
+}

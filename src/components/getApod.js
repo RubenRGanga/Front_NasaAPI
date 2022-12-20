@@ -16,17 +16,11 @@ function GetApod(){
          console.log(apod)
     
         }
-
-    // const getConsult= ()=>{
-    //     getFetch();
-    // }
-
-
+        
 return (
     <>
     <div className="cuadroApod">
-       
-        <TemplateApod titleApod={apod.title} imgApod={apod.url} explanationApod={apod.explanation}/>
+       <TemplateApod titleApod={apod.title} imgApod={apod.url} explanationApod={apod.explanation}/>
     </div>
     </>
 )
