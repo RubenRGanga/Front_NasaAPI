@@ -1,4 +1,5 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 import "./navbar_styles.css"
@@ -15,9 +16,9 @@ function Navbar() {
             </a>
             <div id='cajaTexto'>
                 <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
-                    <li><a href='#home' className='active'>HOME</a></li>
-                    <li><a href='#landings'>LANDINGS</a></li>
-                    <li><a href='#neas'>NEAS</a></li>
+                    <li><NavLink to="/home">HOME</NavLink></li>
+                    <li><NavLink to="/landings">LANDINGS</NavLink></li>
+                    <li><NavLink to="/neas">NEAS</NavLink></li>
                 </ul>
             </div>
             <div id='mobile' onClick={handleClick}>
