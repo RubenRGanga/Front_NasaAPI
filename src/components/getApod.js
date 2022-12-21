@@ -13,7 +13,6 @@ function GetApod(){
         const resp = await fetch(`https://api.nasa.gov/planetary/apod?api_key=uY7HavLXVof0lksxtDQQXvUzVnIprkJ23cXmuZl8`);
         const data = await resp.json();
          setApod(data);
-         console.log(apod)
     
         }
         

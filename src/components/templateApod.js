@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./templateApod.css"
+import "./styles/templateApod_styles.css"
 
 function TemplateApod ({titleApod, imgApod, explanationApod}){
 

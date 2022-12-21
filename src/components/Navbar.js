@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
-import "./navbar_styles.css"
+import "./styles/navbar_styles.css"
 import logo from "./logo.svg"
 
 function Navbar() {

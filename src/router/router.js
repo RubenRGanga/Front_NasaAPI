@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
-// import Navbar from "../components/Navbar";
+
 import PublicLayout from "../components/PublicLayout";
 import GetApod from "../components/GetApod";
+import Landings from "../components/Landings";
+import Neas from "../components/Neas";
 
 const router = createBrowserRouter([
   {
@@ -16,11 +18,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/landings",
-        element: <></>,
+        element: <Landings/>,
       },
       {
         path: "/neas",
-        element: <></>,
+        element: <Neas/>,
       },
     ],
   },
