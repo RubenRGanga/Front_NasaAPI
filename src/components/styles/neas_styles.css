@@ -7,11 +7,50 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+.cuadroNeas{
+    display: flex;
+    flex-flow: wrap;
+    margin-left: 1.8rem;
+}
+
 h2 {
     text-align: center;
     margin-top: 2rem;
-    font-size: 1,8rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: #212121;
     font-family: nasaFont;
+}
+
+h3{
+    
+    background-color: #212121;
+    font-family: nasaFont;
+    color: #f1f1f1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card{
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #212121;
+    border-radius: 25px;
+    width: 270px;
+    margin: 1rem;
+    background-color: #aeb0b5;
+    text-align: center;
+}
+
+.type{
+    font-weight: 600;
+}
+
+.light{
+    background-color: #d6d7d9;
+}
+
+.light_bottom{
+    background-color: #d6d7d9;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
 }

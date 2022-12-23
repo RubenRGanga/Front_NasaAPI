@@ -1,0 +1,11 @@
+.leaflet-container {
+    margin: auto;
+    /* margin-top: -40px; */
+    align-items: center;
+    width: 1100px;
+    height: 400px;
+  }
+
+.marcoMapa{
+  box-shadow: 2px 10px 15px 2px black;
+}

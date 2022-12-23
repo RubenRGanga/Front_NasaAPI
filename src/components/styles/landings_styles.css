@@ -7,12 +7,66 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+.search {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: right;
+    margin-top: 1rem;
+    margin-bottom: -40px;
+    margin-right: 2.4rem;
+    text-align: center;
+    
+    
+}
+
+.search input, button, select{
+    box-shadow: 1px 2px 2px 1px #323a45;
+}
+
+.search input, button{
+    border: 2px solid #061f4a;
+    background-color: #f1f1f1;
+}
+
+.search select{
+    border-top: 2px solid #061f4a;
+    border-bottom: 2px solid #061f4a;
+    background-color: #f1f1f1;
+}
+
+select:focus{ color: #061f4a;}
+
+.search input, select, button{
+    font-family: Poppins;
+}
+
+.search button{
+    cursor: pointer;
+    width: 80px;
+    font-weight: 800;
+}
+
+.search button:hover{
+    background-color: #061f4a;
+    color: #f1f1f1;
+}
+
 h2 {
+    display: block;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 1,5rem;
-    font-size: 1,8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: #212121;
     font-family: nasaFont;
 };
+
+@media (min-width: 769px){
+
+h2 {
+    display: none;
+}
+
+}
