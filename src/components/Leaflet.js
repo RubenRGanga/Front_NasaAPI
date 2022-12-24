@@ -8,7 +8,7 @@ import "./styles/leadflet_styles.css"
     let landing = landings.filter(landing => landing.geolocation)
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false} className='marcoMapa'>
+    <MapContainer center={[31.505, -0.09]} zoom={2} scrollWheelZoom={true} className='marcoMapa'>
       <TileLayer
         attribution=''
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
