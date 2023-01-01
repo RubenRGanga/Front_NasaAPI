@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 
 import "./styles/leadflet_styles.css"
+
 
   const Leaflet = ({landings}) => {
 
@@ -15,9 +17,9 @@ import "./styles/leadflet_styles.css"
 
       {landing.map((item) => (
 
-      <Marker key={item.id} position={[(item.geolocation.latitude), (item.geolocation.longitude)]}>
-        <Popup key={item.id}>
-          Name: {item.name} <br/> Mass(g) :{item.mass} <br/> Year:{item.year}
+      <Marker key={item._id} position={[(item.geolocation.latitude), (item.geolocation.longitude)]}>
+        <Popup key={item._id}>
+          Name: {item.name} <br/> Mass(g) :{item.mass} <br/> Year:{item.year} <br/> <br/> <Link to={`/cpl/${item._id}`}><button>EDIT:</button></Link>
         </Popup>
       </Marker>
 

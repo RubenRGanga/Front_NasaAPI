@@ -1,7 +1,11 @@
 import React, {useState, setState, useEffect} from "react";
+import { Link } from "react-router-dom";
+import { Tooltip } from '@mui/material';
+import axios from "axios";
 import Leaflet from "./Leaflet";
 import "./styles/landings_styles.css"
 
+const endPointLandings = "https://ruben-proyecto-nasa-backend.onrender.com/api/astronomy/landings/";
 
 
 const Landings = () => {
@@ -11,18 +15,23 @@ const Landings = () => {
     const [input, setInput] = useState("")
 
     useEffect(() => {
-        const getFetch = async () =>{
-            const resp = await fetch(`https://ruben-proyecto-nasa-backend.onrender.com/api/astronomy/landings/${query}`);
-            const data = await resp.json();
-              setLandings(data)
-    
-        } 
-        
-        getFetch();
+        async function getLandings (){
 
-    }, [query]
+            const { data } = await axios(endPointLandings + `${query}`);
+              
+              setLandings(data);
+          }
+          getLandings();
+        },[query]);
 
-    )
+        const deleteLanding = async (id) => {
+            try {
+              await axios.delete(endPointLandings + `/delete/${id}`);
+              setLandings(landings.filter(landing => landing.id !== id));
+            } catch (error) {
+              console.error(error);
+            }
+          }
 
     const getFilter = (e) => {
         e.preventDefault(e)
@@ -62,16 +71,20 @@ return (
         <form className='search'>
             <input type= "text" value={input} onChange={(event) => setInput(event.target.value)}/>
                 <select id="value" name="value" onSubmit={(event) => console.log(event.target.value)}>
-                    <option value="RESET">by:</option>
+                    <option>by:</option>
                     <option value="name">Name</option>
                     <option value="year">Year</option>
                     <option value="mass">Mass(g)</option>
                     <option value="<:mass"> +Mass(g)</option>
                     <option value="class">Class</option> 
                 </select>
-            <button onClick={(e) => getFilter(e)}>Search!</button>
+            <button id="search" onClick={(e) => getFilter(e)}>Search!</button>
+
+            <Tooltip title="Landings Control Panel" arrow>
+                <Link to={"/cpl"}><button id="linkCPLanding" className="fa-solid fa-meteor"></button></Link>
+            </Tooltip>
+
         </form>
-        <h2>LANDINGS</h2>
         <Leaflet landings={landings}/>
     </div>
     

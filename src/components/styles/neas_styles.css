@@ -13,6 +13,18 @@
     margin-left: 1.8rem;
 }
 
+/* li {
+    list-style: none;
+    height: 100px;
+    width: 100px;
+    margin: 1rem auto;
+}
+
+li i{
+    height: 80px;
+    width: 80px;
+} */
+
 h2 {
     text-align: center;
     margin-top: 2rem;

@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'nasaFont';
+  src: url('../../../public/assets/nasalization-rg-webfont.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.form{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.input {
+    max-width: 198px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    margin-left: 2px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-family: nasaFont;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+  }
+  
+  .input-group:hover .label, .input:focus {
+    color: #05060fc2;
+  }
+
+  .submit{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    margin-top: 1rem;
+    left: 47%;
+   
+  }
+
+  @media screen and (max-width: 769px){
+
+    .form{
+      display: block;
+      text-align: center;
+      align-items: center;
+      margin-top: 2.5rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    .input{
+      max-width: 300px;
+    }
+
+    .submit{
+      left: 45%;
+    }
+
+  }

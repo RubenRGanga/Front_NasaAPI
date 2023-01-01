@@ -14,7 +14,7 @@
     justify-content: right;
     margin-top: 1rem;
     margin-bottom: -40px;
-    margin-right: 2.4rem;
+    margin-right: 3.4rem;
     text-align: center;
     
     
@@ -35,38 +35,22 @@
     background-color: #f1f1f1;
 }
 
-select:focus{ color: #061f4a;}
-
 .search input, select, button{
     font-family: Poppins;
 }
 
-.search button{
+button{
     cursor: pointer;
     width: 80px;
+    height: 25px;
     font-weight: 800;
 }
 
-.search button:hover{
+button:hover{
     background-color: #061f4a;
     color: #f1f1f1;
 }
 
-h2 {
-    display: block;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 1.2rem;
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #212121;
-    font-family: nasaFont;
-};
-
-@media (min-width: 769px){
-
-h2 {
-    display: none;
-}
-
+#linkCPLanding{
+    margin-left: 15px;
 }
